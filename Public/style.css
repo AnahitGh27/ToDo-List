@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    min-width: 250px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.red {
+    color: red;
+}
+
+.approaching-deadline {
+    background-color: yellow;
+}
+
+#taskInput {
+    width: 45%;
+}
+
+.textInput {
+    width: 40%;
+}
+
+input, button {
+    padding: 7px 15px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+div {
+    margin: 2px;
+}
+
+#add {
+    background-color: #AED581;
+}
+
+.delBtn {
+    background-color: #ff5722;
+}
+
+.editBtn, .saveBtn {
+    background-color: #AED581;
+}
+
+#clearBtn {
+    background-color: #e0e0e0;
+}

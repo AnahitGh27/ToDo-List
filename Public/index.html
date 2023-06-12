@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <h1>Todo List</h1>
+        <form onsubmit="addTask(event)">
+            <input type="text" id="taskInput" placeholder="Enter a new task"/>
+            <input type="datetime-local" id="deadlineInput" />
+            <button type="submit" id="add">Add</button>
+        </form>
+        <div id="taskList"></div>
+        <span id="taskCount"></span>
+        <button onclick="clearCompletedTasks()" id="clearBtn">Clear Completed</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
