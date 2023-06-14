@@ -1,4 +1,18 @@
-const todos = [];
+let todos = [];
+fetch("/todos").then((resp) => resp.json()).then((resp) => {
+  todos = resp;
+  updateTaskStatus();
+})
+
+function sendTodos() {
+  fetch("/todos", {
+    method: "post",
+    headers: {
+        "content-type": "application/json"
+    },
+    body: JSON.stringify(todos)
+  })
+}
 
 function addTask(event) {
   event.preventDefault();
@@ -20,7 +34,7 @@ function addTask(event) {
 
     document.getElementById("taskInput").value = "";
     document.getElementById("deadlineInput").value = "";
-
+    sendTodos();
     updateTaskStatus();
   }
 }
